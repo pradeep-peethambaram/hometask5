@@ -1,6 +1,7 @@
 package _2StateMachine
 
 import _2StateMachine.model.*
+import _2StateMachine.moreTests.startMachine
 import org.junit.Assert
 import org.junit.Test
 
@@ -62,14 +63,8 @@ abstract class AbstractTestStateMachine {
     }
 
     fun testStateMachine(events: List<String>, commands: List<String>, finalState: String) {
-        val actualCommands = mutableListOf<String>()
-        val controller = Controller(setUpStateMachine(), { actualCommands.add(it) })
-        for (code in events) {
-            controller.handle(code)
-        }
-        println(actualCommands)
-        println(controller.state)
-        Assert.assertEquals(finalState, controller.state.code)
-        Assert.assertEquals(commands, actualCommands);
+        val (actualCommands, actualFinalState) = startMachine(setUpStateMachine(), events)
+        Assert.assertEquals(finalState, actualFinalState)
+        Assert.assertEquals(commands, actualCommands)
     }
 }
