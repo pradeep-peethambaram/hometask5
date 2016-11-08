@@ -1,4 +1,4 @@
-package _2StateMachine.moreTests
+package _2StateMachine.moreTestsForTask2
 
 import _2StateMachine.model.Controller
 import _2StateMachine.model.StateMachine

@@ -1,7 +1,7 @@
 package _2StateMachine
 
 import _2StateMachine.model.*
-import _2StateMachine.moreTests.startMachine
+import _2StateMachine.moreTestsForTask2.startMachine
 import org.junit.Assert
 import org.junit.Test
 
