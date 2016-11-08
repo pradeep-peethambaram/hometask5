@@ -1,5 +1,6 @@
 package _2StateMachine.task2
 
+import _2StateMachine.model.*
 import _2StateMachine.model.StateMachine
 
 // Support the following way to configure the state machine.
