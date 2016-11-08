@@ -6,7 +6,7 @@ import _2StateMachine.model.StateMachine
 // Support the following way to configure the state machine.
 // Uncomment the code and make it compile; put all the declarations to the file SurnameNameTask2.kt
 
-fun setUpStateMachine(): StateMachine = TODO() /*stateMachine(start = IDLE) {
+fun setUpStateMachine(): StateMachine = stateMachine(start = IDLE) {
     event(DOOR_CLOSED)
     event(DRAWER_OPENED)
     event(LIGHT_ON)
@@ -39,4 +39,3 @@ fun setUpStateMachine(): StateMachine = TODO() /*stateMachine(start = IDLE) {
 
     resetEvents(DOOR_OPENED)
 }
-*/
