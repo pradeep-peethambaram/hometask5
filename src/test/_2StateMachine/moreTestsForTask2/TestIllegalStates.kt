@@ -27,6 +27,7 @@ open class TestIllegalStates {
 //            assertFailsWith<IllegalStateException> {
 //                command("COMMAND")
 //            }
+//            state("START") {}
 //        }
     }
 
@@ -50,6 +51,7 @@ open class TestIllegalStates {
 //            assertFailsWith<IllegalStateException> {
 //                event("EVENT")
 //            }
+//            state("START") {}
 //        }
     }
 
@@ -58,6 +60,7 @@ open class TestIllegalStates {
     fun onlyKnownResetEvent() {
         TODO()
 //        stateMachine("START") {
+//            state("START") {}
 //            assertFailsWith<IllegalStateException> {
 //                resetEvents("UNKNOWN")
 //            }
@@ -84,6 +87,15 @@ open class TestIllegalStates {
 //                state("START") {
 //                    transition("GO", target = "LAST")
 //                }
+//            }
+//        }
+    }
+
+    @Test
+    fun startStateIsDeclared() {
+        TODO()
+//        assertFailsWith<IllegalStateException> {
+//            stateMachine("START") {
 //            }
 //        }
     }
